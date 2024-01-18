@@ -1,14 +1,14 @@
 .App {
-  margin: 20px 10%;
+  
 }
 
-.wrapper {
-  padding-top: 30px;
+.wrapper_main {
+  padding: 20px 10%;
 }
 
 @media (max-width: 1200px) {
-  .App {
-    margin: 20px 10%;
+  .wrapper_main {
+    padding: 20px 10%;
   }
 }
 

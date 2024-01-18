@@ -8,16 +8,16 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Adjusted to add space between the logo and the menu */
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #333;
   color: #fff;
-  width: 100%;
 }
 
 .logo {
   font-size: 1.5rem;
+  padding-left: 5px;
 }
 
 .logo a {
@@ -28,12 +28,18 @@
 .menu {
   display: flex;
   align-items: center;
+  font-size: 0.8vw;
+  margin-right: 31%;
 }
 
 .menu a {
   text-decoration: none;
   color: #fff;
-  margin: 0 20px;
+  margin: 0 2vw;
+}
+
+.menu a:hover {
+  color: rgb(148, 101, 191);
 }
 
 .mobile-icon {
@@ -42,24 +48,57 @@
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 2000px) and (min-width: 1201px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    font-size: 1.1vw;
+    margin-right: 29%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    font-size: 1.7vw;
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
   .menu {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 40px;
     right: 0;
-    width: 60%;
+    width: 50%;
     background-color: #333;
     justify-content: flex-end;
   }
 
   .mobile-icon {
     display: block;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .menu a {
     margin: 5px 10px;
   }
+}
+
+.mobile_menu_item {
+  margin-bottom: 20px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.mobile_menu_item a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.mobile_menu_item a:hover {
+  color: blueviolet;
 }

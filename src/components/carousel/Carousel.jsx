@@ -110,7 +110,9 @@ function Carousel({ modalOpen }) {
   
     useEffect(() => {
       const handleResize = () => {
-        if (window.innerWidth >= 1200) {
+        if (window.innerWidth >= 2000) {
+          setSlidesToShow(5);
+        } else if (window.innerWidth >= 1200) {
           setSlidesToShow(4);
         } else if (window.innerWidth >= 768) {
           setSlidesToShow(3);

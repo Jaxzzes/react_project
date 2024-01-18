@@ -33,18 +33,34 @@
   }
 
   .carousel-card {
-    margin-left: 18px;
+    margin-left: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
   }
 
   .carousel-item {
-    width: 17vw;
+    width: 13vw;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 2000px) and (min-width: 1201px) {
+    .carousel-card {
+      margin-left: 16px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .carousel-item {
+      width: 17vw;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+    }
   }
 
   @media (max-width: 1200px) and (min-width: 769px) {

@@ -1,0 +1,147 @@
+
+.carousel-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(200, 200, 200, 0.5);
+    color: #fff; 
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+  }
+  
+  .prev-button {
+    left: -35px;
+  }
+  
+  .next-button {
+    right: -35px;
+  }
+
+  .carousel-images {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #000;
+  }
+
+  .carousel-card {
+    margin-left: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .carousel-item {
+    width: 17vw;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 1200px) and (min-width: 769px) {
+    .carousel-card {
+      margin-left: 18px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .carousel-item {
+      width: 20vw;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-card {
+      margin-left: 38px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .carousel-item {
+      width: 56vw;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+    }
+  }
+
+  .carousel-container.hidden {
+    display: none;
+  }
+
+
+  /*********** Styles for dots ************/
+
+  .my-dots {
+    position: absolute;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .my-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .my-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+  
+  .my-dots li button:hover,
+  .my-dots li button:focus {
+    outline: none;
+  }
+  
+  .my-dots li button:hover:before {
+    opacity: 1;
+  }
+  
+  .my-dots li button:before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><line x1="2" y1="10" x2="18" y2="10" stroke="black" stroke-width="2" stroke-linecap="round"/></svg>');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    opacity: 0.25;
+  }
+  
+  .my-dots li.slick-active button:before {
+    opacity: 0.75;
+  }
+  
+  /***********************/

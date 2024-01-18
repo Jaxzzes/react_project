@@ -1,0 +1,65 @@
+/* Navbar.css */
+.wrapper_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Adjusted to add space between the logo and the menu */
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+}
+
+.mobile-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 60%;
+    background-color: #333;
+    justify-content: flex-end;
+  }
+
+  .mobile-icon {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .menu a {
+    margin: 5px 10px;
+  }
+}

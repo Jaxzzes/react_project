@@ -1,14 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css';
-// import { useModalContext } from '../../context/ModalContext';
 
-function Carousel({ modalOpen }) {
-  // const { modal } = useModalContext();
+function Carousel() {
     const [items, setItems] = useState([
         {
           id: 1,
@@ -111,9 +107,9 @@ function Carousel({ modalOpen }) {
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth >= 2000) {
-          setSlidesToShow(5);
+          setSlidesToShow(6);
         } else if (window.innerWidth >= 1200) {
-          setSlidesToShow(4);
+          setSlidesToShow(5);
         } else if (window.innerWidth >= 768) {
           setSlidesToShow(3);
         } else {

@@ -1,4 +1,3 @@
-/* Navbar.css */
 .wrapper_navbar {
   position: fixed;
   top: 0;
@@ -15,12 +14,12 @@
   color: #fff;
 }
 
-.logo {
+.logo_navbar {
   font-size: 1.5rem;
   padding-left: 5px;
 }
 
-.logo a {
+.logo_navbar a {
   text-decoration: none;
   color: #fff;
 }

@@ -1,0 +1,125 @@
+.footer-wrapper {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.top-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_footer {
+  text-align: center;
+  width: 50%;
+}
+
+.logo_footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-title {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.bottom-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.login-link {
+  padding-top: 15px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.login-link a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.login-link a:hover {
+  color: rgb(148, 101, 191);
+}
+
+.linkedin-icon:hover {
+  color: #0077b5;
+}
+
+.instagram-icon:hover {
+  color: #f75307;
+}
+
+.facebook-icon:hover {
+  color: #1877f2;
+}
+
+.google-icon:hover {
+  color: #fd1d1d;
+}
+
+.phone-icon,
+.linkedin-icon,
+.mail-icon,
+.location-icon,
+.instagram-icon,
+.facebook-icon,
+.google-icon {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .top-block {
+    display: block;
+    padding-top: 60px;
+  }
+
+  .logo_footer {
+    text-align: center;
+    position: absolute;
+    bottom: 350px;
+    width: 90%;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+  }
+}

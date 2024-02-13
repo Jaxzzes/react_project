@@ -33,13 +33,13 @@
   }
 
   .carousel-card {
-    margin-left: 20px;
+    margin-left: 45px;
     margin-top: 15px;
     margin-bottom: 15px;
   }
 
   .carousel-item {
-    width: 13vw;
+    width: 12vw;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -49,12 +49,12 @@
 
   @media (max-width: 2000px) and (min-width: 1201px) {
     .carousel-card {
-      margin-left: 16px;
+      margin-left: 33px;
       margin-top: 15px;
       margin-bottom: 15px;
     }
     .carousel-item {
-      width: 17vw;
+      width: 15vw;
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -81,7 +81,7 @@
 
   @media (max-width: 768px) {
     .carousel-card {
-      margin-left: 38px;
+      margin-left: 39px;
       margin-top: 15px;
       margin-bottom: 15px;
     }

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className='wrapper_navbar'style={{position:'relative'}}>
       <div className="navbar">
-        <div className="logo">
+        <div className="logo_navbar">
           <Link to="/home">Logo</Link>
         </div>
         <div className='menu'>

@@ -1,0 +1,15 @@
+.review-modal-star-rating {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.review-modal-star {
+  cursor: pointer;
+  color: #d0d5da;
+  transition: all 0.4s ease-in-out;
+}
+
+.review-modal-star.selected,
+.review-modal-star:hover {
+  color: rgb(255, 204, 0);
+}

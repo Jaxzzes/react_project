@@ -1,0 +1,579 @@
+.cta-request-section {
+  width: 100%;
+  padding: 110px 0;
+}
+
+.cta-request-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.cta-request-head {
+  max-width: 860px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.cta-request-label {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 128, 128, 0.08);
+  color: teal;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.cta-request-title {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #141414;
+  font-family: "Unbounded", sans-serif;
+}
+
+.cta-request-subtitle {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #5b5b5b;
+}
+
+.cta-request-card {
+  border-radius: 28px;
+  padding: 30px;
+}
+
+.cta-request-switcher {
+  display: inline-flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #f4f7f7;
+}
+
+.cta-request-switcher-btn {
+  border: none;
+  background: transparent;
+  color: #4f4f4f;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cta-request-switcher-btn.active {
+  background: teal;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(0, 128, 128, 0.18);
+}
+
+.cta-request-form {
+  width: 100%;
+}
+
+.cta-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cta-form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cta-form-field--full {
+  grid-column: 1 / -1;
+}
+
+.cta-form-input,
+.cta-form-textarea,
+.cta-phone-input .PhoneInputInput {
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+  color: #1f1f1f;
+  box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cta-form-input,
+.cta-phone-input .PhoneInputInput {
+  border-radius: 17px;
+  padding: 14px 16px;
+  border: 2px solid rgba(123, 123, 123, 0.1);
+  transition: all 0.4s ease-in-out;
+  background: #fff;
+}
+
+.cta-form-input:hover,
+.cta-phone-input .PhoneInputInput:hover {
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form-input:focus,
+.cta-phone-input .PhoneInputInput:focus {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  border-color: teal !important;
+}
+
+.cta-form-textarea {
+  min-height: 180px;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 2px solid rgba(123, 123, 123, 0.1);
+  resize: vertical;
+  transition:
+    box-shadow 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+  background: #fff;
+}
+
+.cta-form-textarea:hover,
+.cta-form-textarea:focus,
+.cta-form-textarea:active {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form-textarea:focus,
+.cta-form-textarea:active {
+  border-color: teal !important;
+}
+
+/* Кастомный resizer как в твоей другой форме */
+.cta-form-textarea::-webkit-resizer {
+  background: url("../../assets/images/textarea-resize-icon-teal.png") no-repeat;
+  background-size: contain;
+  border-bottom-right-radius: 9px;
+}
+
+.cta-form-input::placeholder,
+.cta-form-textarea::placeholder,
+.cta-phone-input .PhoneInputInput::placeholder {
+  color: #b0b0b0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cta-form-input:focus::placeholder,
+.cta-form-textarea:focus::placeholder,
+.cta-phone-input .PhoneInputInput:focus::placeholder {
+  opacity: 0;
+}
+
+.cta-select__placeholder,
+.cta-select__single-value {
+  font-size: 18px;
+}
+
+.cta-form-error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #d33;
+}
+
+.cta-phone-input {
+  border: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.cta-phone-input .PhoneInputInput {
+  border: 2px solid rgba(123, 123, 123, 0.1) !important;
+}
+
+.cta-form-field--calendar {
+  position: relative;
+}
+
+.cta-calendar-button {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(0, 128, 128, 0.08);
+  color: teal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.cta-form-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-form-submit {
+  border: none;
+  min-height: 54px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: teal;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(0, 128, 128, 0.18);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cta-form-submit:hover {
+  background: rgb(0, 112, 112);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 128, 128, 0.24);
+}
+
+.cta-form-submit:active {
+  transform: translateY(0);
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.cta-datepicker-popper {
+  z-index: 50;
+}
+
+.react-datepicker {
+  border: 1px solid #dfe6e6;
+  border-radius: 18px;
+  overflow: hidden;
+  font-family: inherit;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+}
+
+.react-datepicker__header {
+  background: #f7fbfb;
+  border-bottom: 1px solid #e7efef;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__time-list-item--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: teal !important;
+  color: #fff !important;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__time-list-item:hover {
+  background-color: rgba(0, 128, 128, 0.08) !important;
+}
+
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box {
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+}
+
+.react-datepicker__time-list-item {
+  height: auto !important;
+  padding: 8px 10px;
+  line-height: 1.4;
+}
+
+.react-datepicker,
+.cta-datepicker-popper {
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 768px) {
+  .cta-request-section {
+    padding: 80px 0;
+  }
+
+  .cta-request-container {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .cta-request-card {
+    padding: 22px 18px;
+    border-radius: 24px;
+  }
+
+  .cta-request-switcher {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .cta-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cta-request-title {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .cta-request-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .cta-form-actions {
+    justify-content: stretch;
+  }
+
+  .cta-form-submit {
+    width: 100%;
+  }
+}
+
+.cta-form-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.cta-select-arrow {
+  font-size: 18px;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center;
+  will-change: transform;
+  display: block;
+}
+
+.cta-number-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-number-btn {
+  width: 46px;
+  min-width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(0, 128, 128, 0.08);
+  color: teal;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta-number-btn:hover {
+  background: rgba(0, 128, 128, 0.14);
+}
+
+.cta-number-btn:active {
+  transform: scale(0.97);
+}
+
+.cta-number-input {
+  text-align: center;
+}
+
+.cta-number-input::-webkit-outer-spin-button,
+.cta-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cta-number-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.cta-custom-select {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-custom-select__container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid rgba(123, 123, 123, 0.1);
+  box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
+  overflow: visible;
+  z-index: 5;
+}
+
+.cta-custom-select:hover .cta-custom-select__container,
+.cta-custom-select.open .cta-custom-select__container {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-custom-select.open .cta-custom-select__container {
+  border-color: teal;
+}
+
+.cta-custom-select.error .cta-custom-select__container {
+  border-color: #d33;
+}
+
+.cta-custom-select__selected {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 18px;
+  color: #1f1f1f;
+  border-radius: 25px;
+}
+
+.cta-custom-select__selected .placeholder {
+  color: #b0b0b0;
+}
+
+.cta-custom-select__selected .selected {
+  color: #1f1f1f;
+}
+
+.cta-custom-select__arrow {
+  font-size: 18px;
+  color: teal;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.cta-custom-select.open .cta-custom-select__arrow {
+  transform: rotate(-90deg);
+}
+
+.cta-custom-select__options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.22s ease-in-out,
+    transform 0.22s ease-in-out;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(123, 123, 123, 0.08);
+  z-index: 20;
+
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+.cta-custom-select__options.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cta-custom-select__option {
+  padding: 11px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  color: #1f1f1f;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.cta-custom-select__option:hover {
+  background: rgba(0, 128, 128, 0.08);
+}
+
+.cta-custom-select__option.active {
+  background: teal;
+  color: #fff;
+}
+
+.cta-ac-select__placeholder,
+.cta-ac-select__single-value,
+.cta-ac-select__input-container {
+  font-size: 18px;
+}
+
+.cta-ac-select__menu {
+  z-index: 40;
+}
+
+.cta-ac-select-arrow {
+  font-size: 18px;
+  color: teal;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+  will-change: transform;
+  display: block;
+}
+
+.cta-ac-select-menu-animated {
+  animation: ctaAcSelectFadeIn 0.22s ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes ctaAcSelectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-form-submit:disabled {
+  opacity: 0.92;
+  cursor: not-allowed;
+}
+
+.cta-form-submit-loader-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-form-submit-loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: ctaButtonSpin 0.75s linear infinite;
+}
+
+@keyframes ctaButtonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

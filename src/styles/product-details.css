@@ -1,0 +1,232 @@
+/* Gallery Styles */
+
+.image-gallery-fullscreen-button {
+  color: rgb(0, 173, 173);
+  transition: all 0.4s ease-in-out;
+}
+
+.image-gallery-fullscreen-button:hover {
+  color: rgb(0, 212, 212);
+}
+
+.image-gallery-play-button {
+  color: rgb(0, 173, 173);
+}
+
+.image-gallery-play-button:hover {
+  color: rgb(0, 212, 212);
+}
+
+.image-gallery-thumbnail {
+  scale: 0.9;
+  border-radius: 17px;
+  box-shadow: 0px 0px 4px 4px rgba(126, 126, 126, 0.05);
+  border: none !important;
+  margin: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-gallery-thumbnail:hover {
+  scale: 1;
+}
+
+.image-gallery-thumbnail.active {
+  scale: 1.1;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  color: rgb(0, 182, 182);
+}
+
+.image-gallery-left-nav:hover,
+.image-gallery-right-nav:hover {
+  color: rgb(0, 212, 212);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-gallery-icon {
+  filter: drop-shadow(0 1px 3px #a8a8a8);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-gallery-icon:hover .image-gallery-svg {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Main Page Styles */
+
+.top-block-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-product {
+  font-size: 3em;
+  padding-top: 4vh;
+  margin-bottom: 0 !important;
+}
+
+.price-product {
+  width: 66%;
+  margin-left: 30%;
+  font-size: 2.5em;
+  text-align: right;
+  background-color: teal;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.price-text {
+  font-size: 0.7em !important;
+}
+
+.description-product {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.description-title,
+.last-block-title {
+  font-weight: bold;
+  font-size: 1em;
+  color: #adb2b8;
+}
+
+.last-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-block {
+  width: 50%;
+}
+
+.category-product,
+.review-rating {
+  font-size: 1.2em;
+}
+
+.right-block {
+  width: 40%;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tab-block {
+  margin: 3vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-buttons {
+  padding-top: 2vh;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buy-button-block {
+  margin-top: 60px;
+  background-color: teal;
+  color: #fff;
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 50px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.buy-button-block:hover {
+  width: 210px;
+  background-color: rgb(0, 182, 182);
+  cursor: pointer;
+}
+
+.buy-button-block:active {
+  width: 160px;
+  background-color: rgb(0, 200, 200);
+}
+
+.buy-button {
+  vertical-align: top;
+  line-height: 45px;
+}
+
+@media (max-width: 768px) {
+  .top-block-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-block {
+    width: 100%;
+  }
+  .right-block {
+    width: 100%;
+  }
+  .title-product {
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+  .price-product {
+    width: 70%;
+  }
+  .description-product,
+  .last-block {
+    padding-left: 10px;
+  }
+  .last-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .buy-button-block {
+    margin-top: 15px;
+    background-color: teal;
+    color: #fff;
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .tabs {
+    height: 50px;
+  }
+  .tabs label {
+    font-size: 1.1em;
+  }
+  .image-gallery-thumbnail {
+    scale: 0.9;
+    border-radius: 17px;
+    box-shadow: 0px 0px 5px 5px rgba(126, 126, 126, 0.05);
+    border: none !important;
+    margin: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .image-gallery-fullscreen-button {
+    display: none;
+  }
+  .price-product {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .tab-block {
+    margin-top: 0;
+  }
+}

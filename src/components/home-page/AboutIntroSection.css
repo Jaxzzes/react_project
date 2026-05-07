@@ -1,0 +1,150 @@
+.about-intro-section {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.about-intro-container {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 54px;
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.about-intro-collage {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-intro-bottom-row {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 18px;
+}
+
+.about-image {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.about-image:hover img {
+  transform: scale(1.06);
+}
+
+.about-image-top {
+  height: 250px;
+}
+
+.about-image-left,
+.about-image-right {
+  height: 320px;
+}
+
+.about-intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-intro-label {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 128, 128, 0.08);
+  color: teal;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.about-intro-title {
+  margin: 0 0 40px;
+  font-size: clamp(24px, 2.8vw, 42px);
+  line-height: 1.12;
+  font-weight: 700;
+  color: #141414;
+  letter-spacing: -0.03em;
+  font-family: "Unbounded", sans-serif;
+}
+
+.about-intro-text {
+  margin: 0 0 16px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #505050;
+}
+
+.about-intro-text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .about-intro-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-intro-content {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-intro-section {
+    padding: 30px 0;
+  }
+
+  .about-intro-container {
+    width: min(100%, calc(100% - 24px));
+    gap: 30px;
+  }
+
+  .about-intro-collage {
+    gap: 14px;
+  }
+
+  .about-intro-bottom-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about-image-top {
+    height: 220px;
+  }
+
+  .about-image-left,
+  .about-image-right {
+    height: 220px;
+  }
+
+  .about-intro-title {
+    margin-bottom: 18px;
+  }
+
+  .about-intro-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}

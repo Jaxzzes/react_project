@@ -1,0 +1,69 @@
+.inventory-loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  min-height: 180px;
+  animation: fadeIn 0.4s ease;
+}
+
+.multi-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: transparent;
+  filter: drop-shadow(0 0 2px rgba(20, 184, 166, 0.6));
+}
+
+.ring1 {
+  inset: 0;
+  border-width: 3px;
+  border-top-color: teal;
+  border-right-color: teal;
+  border-radius: 50%;
+  animation: rotateClockwise 1.6s linear infinite;
+}
+
+.ring2 {
+  inset: 7px;
+  border-width: 2.5px;
+  border-left-color: teal;
+  border-top-color: teal;
+  animation: rotateCounter 2.3s linear infinite;
+}
+
+.ring3 {
+  inset: 14px;
+  border-width: 2px;
+  border-bottom-color: teal;
+  border-right-color: teal;
+  animation: rotateClockwise 3s linear infinite;
+}
+
+@keyframes rotateClockwise {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounter {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

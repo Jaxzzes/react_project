@@ -1,0 +1,126 @@
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.review-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  width: 800px;
+  margin: auto;
+}
+
+.review-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.review-close-button {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.review-close-button-text {
+  font-weight: 600;
+}
+
+.review-modal-block-button {
+  display: flex;
+  justify-content: center;
+}
+
+.review-modal-input,
+.review-modal-textarea,
+.review-modal-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.review-modal-button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  width: 120px;
+  border-radius: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.review-modal-button:hover {
+  background-color: rgb(0, 167, 167);
+}
+
+.review-modal-input {
+  width: 98%;
+  border: none;
+  border: 2px solid #d0d5da;
+  padding: 7px 7px;
+  outline: none;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.review-modal-input:hover {
+  border-color: teal;
+}
+
+.review-modal-input:focus {
+  border-color: rgb(0, 201, 201);
+}
+
+.review-modal-textarea {
+  position: relative;
+  width: 98%;
+  height: 120px;
+  border: 2px solid #d0d5da;
+  border-radius: 10px;
+  padding: 5px 7px;
+  resize: vertical;
+  transition: border 0.4s ease-in-out;
+}
+
+.review-modal-textarea:hover {
+  border-color: teal;
+}
+
+.review-modal-textarea:focus,
+.review-modal-textarea:active {
+  border-color: rgb(0, 251, 251) !important;
+}
+
+.review-modal-input::placeholder,
+.review-modal-textarea::placeholder {
+  color: #b0b0b0;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.review-modal-input:focus::placeholder,
+.review-modal-textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.review-modal-input,
+.review-modal-textarea {
+  color: #333;
+}
+
+.review-modal textarea::-webkit-resizer {
+  background: url(../../assets/images/textarea-resize-icon-teal.png);
+}

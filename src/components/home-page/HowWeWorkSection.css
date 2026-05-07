@@ -1,0 +1,191 @@
+.how-work-section {
+  width: 100%;
+  padding: 110px 0;
+}
+
+.how-work-container {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.how-work-heading {
+  max-width: 860px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.how-work-label {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 128, 128, 0.08);
+  color: teal;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.how-work-title {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #141414;
+  font-family: "Unbounded", sans-serif;
+}
+
+.how-work-subtitle {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #5a5a5a;
+}
+
+.how-work-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.how-work-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px 24px 26px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+}
+
+.how-work-step {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 128, 128, 0.08);
+  color: rgba(0, 128, 128, 0.85);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.how-work-card-title {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #171717;
+}
+
+.how-work-card-text {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555555;
+}
+
+.how-work-card::after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  right: -34px;
+  width: 68px;
+  height: 14px;
+  z-index: 2;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='68' height='14' viewBox='0 0 68 14' fill='none'><path d='M1 7H58' stroke='%23008080' stroke-width='2.4' stroke-linecap='round'/><path d='M52 1L58 7L52 13' stroke='%23008080' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+.how-work-card:last-child::after {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .how-work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .how-work-card::after {
+    top: 58px;
+    right: -34px;
+    width: 68px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='68' height='14' viewBox='0 0 68 14' fill='none'><path d='M1 7H58' stroke='%23008080' stroke-width='2.4' stroke-linecap='round'/><path d='M52 1L58 7L52 13' stroke='%23008080' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  }
+
+  .how-work-card:nth-child(2)::after,
+  .how-work-card:nth-child(4)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-work-section {
+    padding: 80px 0;
+  }
+
+  .how-work-container {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .how-work-heading {
+    margin-bottom: 30px;
+  }
+
+  .how-work-title {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .how-work-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .how-work-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .how-work-card {
+    padding: 24px 20px 22px;
+  }
+
+  .how-work-card::after {
+    top: auto;
+    right: auto;
+    left: 50%;
+    bottom: -34px;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 68px;
+    display: block;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='68' viewBox='0 0 14 68' fill='none'><path d='M7 1V58' stroke='%23008080' stroke-width='2.4' stroke-linecap='round'/><path d='M1 52L7 58L13 52' stroke='%23008080' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  }
+
+  .how-work-card:last-child::after {
+    display: none;
+  }
+
+  .how-work-step {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+    font-size: 22px;
+  }
+
+  .how-work-card-title {
+    font-size: 22px;
+  }
+
+  .how-work-card-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}

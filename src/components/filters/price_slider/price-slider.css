@@ -1,0 +1,164 @@
+.price-slider-container {
+  padding-left: 8px;
+}
+
+.rc-slider {
+  width: 94.5%;
+  height: 3px;
+  margin-left: 2%;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.rc-slider .rc-slider-track {
+  background-color: teal;
+}
+
+.rc-slider .rc-slider-handle {
+  width: 18px;
+  height: 18px;
+  background-color: teal;
+  border: none !important;
+  border-radius: 50%;
+  cursor: grab;
+  margin-top: -7px;
+  opacity: 1;
+}
+
+.rc-slider .rc-slider-handle:active {
+  cursor: grabbing;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2) !important;
+  border: none;
+}
+
+.rc-slider .rc-slider-handle:focus {
+  outline: none;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2) !important;
+  border: none;
+}
+
+.rc-slider .rc-slider-handle.active {
+  background-color: teal !important;
+}
+
+.rc-slider .rc-slider-handle .tooltip {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  margin-top: -14px;
+  margin-left: -14px;
+  font-size: 12px;
+}
+
+.price-label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: rgb(68, 68, 68);
+}
+
+.price-slider-container {
+  position: relative;
+  height: 70px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1 !important;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.label-input-first,
+.label-input-second {
+  margin-top: -4px;
+}
+
+.price-values {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.price-values .input-min-price {
+  position: absolute;
+  border-radius: 15px;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+}
+
+.price-values .input-max-price {
+  position: absolute;
+  border-radius: 15px;
+  padding: 5px 10px;
+  top: 0;
+}
+
+.price-values input.input-focus {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.price-values input[type="number"] {
+  position: relative;
+  border: none;
+  color: #000;
+  border-radius: 15px;
+  padding: 3px 5px;
+  width: 100px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.price-values input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.price-values input[type="number"]:hover {
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.arrow-block {
+  height: 13px;
+}
+
+.arrow {
+  font-size: 13px;
+  color: teal;
+  transition: all 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.arrow:active {
+  transform: scale(0.8);
+}

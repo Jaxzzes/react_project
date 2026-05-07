@@ -1,0 +1,332 @@
+.carousel-container {
+  position: relative;
+  z-index: 1;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(200, 200, 200, 0.5);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+.prev-button {
+  left: -35px;
+}
+
+.next-button {
+  right: -35px;
+}
+
+.carousel-item-image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1); */
+}
+
+.center {
+  text-align: center;
+}
+
+.carousel-item-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.carousel-item-image img {
+  width: 100%;
+}
+
+.carousel-card {
+  margin-left: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.carousel-item {
+  width: 330px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 2000px) and (min-width: 1201px) {
+  .carousel-card {
+    margin-left: 33px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .carousel-item {
+    /* width: 15vw; */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .carousel-card {
+    margin-left: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .carousel-item {
+    width: 20vw;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    margin-left: 39px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .carousel-item {
+    width: 79.5vw;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.carousel-container.hidden {
+  display: none;
+}
+
+/*********** Styles for dots ************/
+
+.my-dots {
+  position: absolute;
+  bottom: -20px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.my-dots li {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.my-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 25px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.my-dots li button:hover,
+.my-dots li button:focus {
+  outline: none;
+}
+
+.my-dots li button:hover:before {
+  opacity: 0.75;
+}
+
+.my-dots li button:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 20 20"><line x1="2" y1="10" x2="20" y2="10" stroke="black" stroke-width="3" stroke-linecap="round"/></svg>');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 20px;
+  text-align: center;
+  opacity: 0.25;
+}
+
+.my-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+/* Edit button/modal */
+
+.header-carousel {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.edit-carousel-button {
+  border: none;
+  background-color: teal;
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 12px;
+  border-radius: 15px;
+  margin-right: 7px;
+}
+
+.edit-carousel-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.edit-carousel-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  max-width: 80%;
+  width: 1000px;
+  margin: auto;
+}
+
+.edit-carousel-product-items {
+  display: flex;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.edit-carousel-product-item-left,
+.edit-carousel-product-item-right {
+  width: 50%;
+}
+
+.edit-carousel-product-checkbox {
+  width: 61px;
+  height: 26px;
+  background: rgba(128, 128, 128, 0.5);
+  margin: 10px 0;
+  margin-right: 20px;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  -webkit-box-shadow:
+    inset 0px 3px 3px rgba(86, 86, 86, 0.2),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow:
+    inset 0px 3px 3px rgba(86, 86, 86, 0.2),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow:
+    inset 0px 3px 3px rgba(86, 86, 86, 0.2),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.edit-carousel-product-checkbox.checked {
+  background: rgba(0, 128, 128, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-carousel-product-checkbox.checked label {
+  left: 36px;
+}
+
+.edit-carousel-product-checkbox label {
+  display: block;
+  width: 21px;
+  height: 20px;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 2.8px;
+  left: 4px;
+  z-index: 1;
+
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(81, 81, 81, 0.5);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(81, 81, 81, 0.5);
+  box-shadow: 0px 2px 5px 0px rgba(81, 81, 81, 0.5);
+  background: #fff;
+}
+
+/* .edit-carousel-product-checkbox input[type="checkbox"]:checked + label {
+  left: 36px;
+} */
+
+.edit-carousel-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.carousel-error-message {
+  color: red;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-error-message.active {
+  color: red;
+  text-align: center;
+  opacity: 1;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-carousel-modal-button-block {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.edit-carousel-modal-button {
+  border: none;
+  background-color: teal;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 17px;
+}
+
+.edit-carousel-product-content {
+  display: flex;
+  align-items: center;
+  margin: 0 20%;
+}
